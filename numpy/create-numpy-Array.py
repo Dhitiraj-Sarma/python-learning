@@ -150,3 +150,23 @@ print("C-order array:", e) # [[0. 0. 0.] [0. 0. 0.]]
 # Create a 2x3 array in F-order
 f = np.zeros((2, 3), order='F')
 print("F-order array:", f) # [[0. 0. 0.] [0. 0. 0.]]
+
+
+# -----------------------------------------------------------------------------------------
+# To create an array filled with all ones, given the shape and type of array, we can use numpy.ones() method of NumPy library in Python.
+
+
+array = np.ones(5)
+print(array) # [1. 1. 1. 1. 1.]
+
+# Create a 2D array of ones (3 rows, 4 columns)
+ones_array_2d = np.ones((3, 4))
+print(ones_array_2d) # [[1. 1. 1. 1.] [1. 1. 1. 1.] [1. 1. 1. 1.]]
+
+# Create an integer array of ones with 4 elements
+ones_int_array = np.ones(4, dtype=int)
+print(ones_int_array) # [1 1 1 1]
+
+# Create a 3D array of ones with shape (2, 3, 4)
+ones_array_3d = np.ones((2, 3, 4), dtype=int)
+print(ones_array_3d) # [[[1 1 1 1] [1 1 1 1] [1 1 1 1]] [[1 1 1 1] [1 1 1 1] [1 1 1 1]]]
