@@ -104,3 +104,49 @@ sequence = np.arange(0, 20, 3)
 # Filtering the sequence to include only values greater than 10
 filtered = sequence[sequence > 10]
 print("Filtered Sequence:", filtered) # [12 15 18]
+
+
+
+# -------------------------------------------------------------------------------------------------------
+
+# numpy.zeros() function creates a new array of specified shapes and types, filled with zeros.
+# It is beneficial when you need a placeholder array to initialize variables or store intermediate results.
+# We can create 1D array using numpy.zeros().
+
+# SYNTAX
+# numpy.zeros(shape, dtype = None, order = ‘C’)
+
+"""
+Parameters:
+
+    shape: integer or sequence of integers – Defines the shape of the new array. Can be a single integer or a tuple.
+    dtype: optional, default is float – The data type of the returned array. If not specified, the default is float.
+    order: {‘C’, ‘F’} – Specifies the memory layout order:
+        C-order: C-contiguous order means the last index varies the fastest. It is optimal for row-wise operations.
+        F-order: FORTRAN-contiguous order means the first index varies the fastest. It is optimal for column-wise operations.
+
+Return Value
+
+    numpy.zeros() returns a new array filled with zeros, based on the specified shape and type.
+"""
+
+arr = np.zeros(5)
+print(arr) # [0. 0. 0. 0. 0.]
+
+# Creating a 2D array with 3 rows and 4 columns
+arr = np.zeros((3, 4))
+
+print(arr) # [[0. 0. 0. 0.] [0. 0. 0. 0.] [0. 0. 0. 0.]]
+
+# Create an array of tuples with zeros
+d = np.zeros((2, 2), dtype=[('f', 'f4'), ('i', 'i4')])
+print(d) # [[(0., 0) (0., 0)] [(0., 0) (0., 0)]]
+
+
+# Create a 2x3 array in C-order
+e = np.zeros((2, 3), order='C')
+print("C-order array:", e) # [[0. 0. 0.] [0. 0. 0.]]
+
+# Create a 2x3 array in F-order
+f = np.zeros((2, 3), order='F')
+print("F-order array:", f) # [[0. 0. 0.] [0. 0. 0.]]
