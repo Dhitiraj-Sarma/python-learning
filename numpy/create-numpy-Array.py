@@ -170,3 +170,69 @@ print(ones_int_array) # [1 1 1 1]
 # Create a 3D array of ones with shape (2, 3, 4)
 ones_array_3d = np.ones((2, 3, 4), dtype=int)
 print(ones_array_3d) # [[[1 1 1 1] [1 1 1 1] [1 1 1 1]] [[1 1 1 1] [1 1 1 1] [1 1 1 1]]]
+
+
+
+# --------------------------------------------------------------------------------------------------
+"""
+linspace() function in NumPy returns an array of evenly spaced numbers over a specified range.
+Unlike the range() function in Python that generates numbers with a specific step size.
+linspace() allows you to specify the total number of points you want in the array, 
+and NumPy will calculate the spacing between the numbers automatically.
+
+# SYNTAX
+# numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
+
+# Parameters:
+
+    start: [optional] start of interval range. By default start = 0
+    stop: end of interval range
+    num: [int, optional] No. of samples to generate
+    retstep: If True, Stop is the last sample By default restep = False
+    endpoint: If True, stop is included as the last value. If False, stop is excluded. By default endpoint=True.
+    dtype: type of output array
+    axis: If start and stop are arrays, axis specifies on what axis will the values be added. If axis = 0, value is added to front, if axis = -1 value is added at the end.
+
+Return Type:
+
+    ndarray
+    step : [float, optional], if restep = True
+
+"""
+# Example 1: Basic Usage
+arr = np.linspace(0, 10, num=5)
+print(arr) # [ 0. 2.5 5. 7.5 10.]
+
+
+# Generate 10 numbers between 0 and 1
+array = np.linspace(0, 1, num=10)
+print(array) # [0.         0.11111111 0.22222222 0.33333333 0.44444444 0.55555556 0.66666667 0.77777778 0.88888889 1.        ]
+
+
+# Example 2: Exclude the endpoint
+arr = np.linspace(0, 10, num=5, endpoint=False)
+print(arr) # [0. 2. 4. 6. 8.]
+
+
+# Example 3: Include the endpoint
+arr = np.linspace(0, 10, num=5, endpoint=True)
+print(arr) # [ 0. 2.5 5. 7.5 10.]
+
+
+# Example 4: Return the step size
+arr, step = np.linspace(0, 10, num=5, retstep=True)
+print(arr) # [ 0. 2.5 5. 7.5 10.]
+print("Step size:", step) # Step size: 2.5
+
+
+# Example 5: Specifying the data type
+arr = np.linspace(0, 10, num=5, dtype=int)
+print(arr) # [ 0 2 5 7 10]
+
+# Create a 2D array of 5x5 numbers between 0 and 1
+arr = np.linspace(0, 1, num=25).reshape(5, 5)
+print(arr) # [[0.   0.04 0.08 0.12 0.16] [0.2  0.24 0.28 0.32 0.36] [0.4  0.44 0.48 0.52 0.56] [0.6  0.64 0.68 0.72 0.76] [0.8  0.84 0.88 0.92 0.96]]
+
+# Example 6: Specifying the axis
+arr = np.linspace(0, 10, num=5, axis=-1)
+print(arr) # [ 0.   2.5  5.   7.5 10. ]
