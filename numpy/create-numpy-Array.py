@@ -317,3 +317,43 @@ print(full_array) # [[7 7 7] [7 7 7]]
 # Example 3: Specifying the data type
 full_array = np.full(5, 7, dtype=float)
 print(full_array) # [7. 7. 7. 7. 7.]
+
+
+# ------------------------------------------------------------------------------------------
+"""
+numpy.meshgrid()– It is used to create a rectangular grid out of two given one-dimensional 
+arrays representing the Cartesian indexing or Matrix indexing. 
+It is useful for evaluating functions on a grid.
+
+# SYNTAX
+numpy.meshgrid(*xi, copy=True, sparse=False, indexing='xy')
+Parameters:
+	*xi: 1-D arrays – Input arrays.
+	copy: bool, optional – If True, the output arrays are always copied. Default is True.
+	sparse: bool, optional – If True, a sparse meshgrid is returned. Default is False.
+	indexing: {‘xy’, ‘ij’}, optional – Cartesian (‘xy’) or matrix (‘ij’) indexing of output. Default is ‘xy’.
+"""
+# Example 1: Basic Usage
+x = np.array([1, 2, 3])
+y = np.array([4, 5])
+X, Y = np.meshgrid(x, y)
+print("X:\n", X) # [[1 2 3] [1 2 3]]
+print("Y:\n", Y) # [[4 4 4] [5 5 5]]
+# Example 2: Specifying the indexing
+x = np.array([1, 2, 3])
+y = np.array([4, 5])
+X, Y = np.meshgrid(x, y, indexing='ij')
+print("X:\n", X) # [[1 1] [2 2] [3 3]]
+print("Y:\n", Y) # [[4 5] [4 5] [4 5]]
+# Example 3: Sparse meshgrid
+x = np.array([1, 2, 3])
+y = np.array([4, 5])
+X, Y = np.meshgrid(x, y, sparse=True)
+print("X:\n", X) # [[1 2 3]]
+print("Y:\n", Y) # [[4 5]]
+# Example 4: Using copy parameter
+x = np.array([1, 2, 3])
+y = np.array([4, 5])
+X, Y = np.meshgrid(x, y, copy=False)
+print("X:\n", X) # [[1 2 3] [1 2 3]]
+print("Y:\n", Y) # [[4 4 4] [5 5 5]]
