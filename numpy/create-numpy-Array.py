@@ -236,3 +236,32 @@ print(arr) # [[0.   0.04 0.08 0.12 0.16] [0.2  0.24 0.28 0.32 0.36] [0.4  0.44 0
 # Example 6: Specifying the axis
 arr = np.linspace(0, 10, num=5, axis=-1)
 print(arr) # [ 0.   2.5  5.   7.5 10. ]
+
+# ---------------------------------------------------------------------------------------------
+"""
+ numpy.eye() is a function in the NumPy library that creates a 2D array with ones on the diagonal and zeros elsewhere.
+This function is often used to generate identity matrices with ones along the diagonal and zeros in all other positions.
+
+# SYNTAX
+numpy.eye(N, M=None, k=0, dtype=<class ‘float’>, order=’C’)
+
+Parameters:
+	N: int – Number of rows in the output array.
+	M: int, optional – Number of columns in the output array. If not specified, it defaults to N.
+	k: int, optional – Index of the diagonal. Default is 0, which refers to the main diagonal. Positive values refer to diagonals above the main diagonal, and negative values refer to diagonals below.
+	dtype: data-type, optional – The desired data type of the output array. Default is float.
+	order: {‘C’, ‘F’}, optional – Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory.
+
+"""
+# Example 1: Basic Usage
+identity_matrix = np.eye(3)
+print(identity_matrix) # [[1. 0. 0.] [0. 1. 0.] [0. 0. 1.]]
+# Example 2: Specifying the number of rows and columns
+identity_matrix = np.eye(3, 4)
+print(identity_matrix) # [[1. 0. 0. 0.] [0. 1. 0. 0.] [0. 0. 1. 0.]]
+# Example 3: Specifying a diagonal offset refers to shifting the location of the diagonal filled with 1s within the matrix.
+identity_matrix = np.eye(3, k=1)
+print(identity_matrix) # [[0. 1. 0.] [0. 0. 1.] [0. 0. 0.]]
+# Example 4: Specifying the data type
+identity_matrix = np.eye(3, dtype=int)
+print(identity_matrix) # [[1 0 0] [0 1 0] [0 0 1]]
