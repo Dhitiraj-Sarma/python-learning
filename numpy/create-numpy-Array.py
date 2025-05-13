@@ -294,3 +294,26 @@ print(" first" , empty_array) # [0 4612811918334230528 4617315517961601024 46201
 # Example 4: Specifying the order
 empty_array = np.empty((2, 3), dtype=int, order='F')
 print(empty_array) # [[0 0 0] [0 0 0]]
+
+
+# ------------------------------------------------------------------------------------------
+"""
+numpy.full() is a function in NumPy that creates a new array of a specified shape and type, filled with a specified value.
+This function is useful when you need an array initialized with a specific value, rather than zeros or ones.
+# SYNTAX
+numpy.full(shape, fill_value, dtype=None, order='C')
+Parameters:
+	shape: int or tuple of int – The shape of the new array.
+	fill_value: scalar – The value to fill the array with.
+	dtype: data-type, optional – The desired data type of the output array. If not specified, it defaults to the data type of fill_value.
+	order: {‘C’, ‘F’}, optional – Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory.
+"""
+# Example 1: Basic Usage
+full_array = np.full(5, 7)
+print(full_array) # [7 7 7 7 7]
+# Example 2: Specifying the shape
+full_array = np.full((2, 3), 7)
+print(full_array) # [[7 7 7] [7 7 7]]
+# Example 3: Specifying the data type
+full_array = np.full(5, 7, dtype=float)
+print(full_array) # [7. 7. 7. 7. 7.]
