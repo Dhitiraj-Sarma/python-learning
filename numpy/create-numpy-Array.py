@@ -265,3 +265,32 @@ print(identity_matrix) # [[0. 1. 0.] [0. 0. 1.] [0. 0. 0.]]
 # Example 4: Specifying the data type
 identity_matrix = np.eye(3, dtype=int)
 print(identity_matrix) # [[1 0 0] [0 1 0] [0 0 1]]
+
+
+# ------------------------------------------------------------------------------------------
+"""
+Empty array: This array isn’t initialized with any specific values. It’s like a blank page, ready to be filled with data later. 
+However, it will contain random leftover values in memory until you update it.
+
+Empty arrays are useful when you want to create an array but don’t have the data ready yet.
+
+# SYNTAX
+numpy.empty(shape, dtype=float, order='C')
+Parameters:
+	shape: int or tuple of int – The shape of the empty array.
+	dtype: data-type, optional – The desired data type of the array. Default is float.
+	order: {‘C’, ‘F’}, optional – Whether to store multi-dimensional data in row-major (C-style) or column-major (Fortran-style) order in memory.
+"""
+
+# Example 1: Basic Usage
+empty_array = np.empty(5)
+print(empty_array) # [ 0. 2.5 5. 7.5 10. ]
+# Example 2: Specifying the shape
+empty_array = np.empty((2, 3))
+print(empty_array) # [[0. 0. 0.] [0. 0. 0.]]
+# Example 3: Specifying the data type
+empty_array = np.empty(5, dtype=int)
+print(" first" , empty_array) # [0 4612811918334230528 4617315517961601024 4620130267728707584 4621819117588971520]
+# Example 4: Specifying the order
+empty_array = np.empty((2, 3), dtype=int, order='F')
+print(empty_array) # [[0 0 0] [0 0 0]]
