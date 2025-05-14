@@ -409,3 +409,155 @@ arr = np.array([1, 2, 3])
 out = np.zeros_like(arr, dtype=float)
 np.exp(arr, out=out)
 print(out)  # Output: [ 2.71828183  7.3890561  20.08553692 ]
+
+
+
+# ----------------------------------------------------------------------------------
+"""
+creating a vector in Python using NumPy
+
+A vector is a one-dimensional array that can hold multiple values.
+
+
+# SYNTAX
+Syntax : np.array(list)
+Argument : It take 1-D list it can be 1 row and n columns or n rows and 1 column
+Return : It returns vector which is numpy.ndarray
+"""
+
+# Creating a Vector
+
+# creating a 1-D list (Horizontal) 
+list1 = [1, 2, 3] 
+  
+# creating a 1-D list (Vertical) 
+list2 = [[10], 
+        [20], 
+        [30]] 
+  
+# creating a vector1 
+# vector as row 
+vector1 = np.array(list1) 
+  
+# creating a vector 2 
+# vector as column 
+vector2 = np.array(list2) 
+  
+  
+# showing horizontal vector 
+print("Horizontal Vector") 
+print(vector1) # [1 2 3]
+  
+print("----------------") 
+  
+# showing vertical vector 
+print("Vertical Vector") 
+print(vector2)
+"""
+[[10]
+ [20]
+ [30]]
+ """
+
+ # Basic Arithmetic operation on vectors
+
+ # creating a 1-D list (Horizontal) 
+list1 = [5, 6, 9] 
+  
+# creating a 1-D list (Horizontal) 
+list2 = [1, 2, 3] 
+  
+# creating first vector 
+vector1 = np.array(list1) 
+  
+# printing vector1 
+print("First Vector          : " + str(vector1)) # [5 6 9]
+  
+# creating second vector 
+vector2 = np.array(list2) 
+  
+# printing vector2 
+print("Second Vector         : " + str(vector2)) # [1 2 3]
+  
+# adding both the vector 
+# a + b = (a1 + b1, a2 + b2, a3 + b3) 
+addition = vector1 + vector2  
+  
+# printing addition vector 
+print("Vector Addition       : " + str(addition)) # [6 8 12]
+  
+# subtracting both the vector 
+# a - b = (a1 - b1, a2 - b2, a3 - b3) 
+subtraction = vector1 - vector2 
+  
+# printing addition vector 
+print("Vector Subtraction   : " + str(subtraction)) # [4 4 6]
+  
+# multiplying  both the vector 
+# a * b = (a1 * b1, a2 * b2, a3 * b3) 
+multiplication = vector1 * vector2 
+  
+# printing multiplication vector 
+print("Vector Multiplication : " + str(multiplication)) # [ 5 12 27]
+  
+# dividing  both the vector 
+# a / b = (a1 / b1, a2 / b2, a3 / b3) 
+division = vector1 / vector2 
+  
+# printing division vector 
+print("Vector Division       : " + str(division))  # [5. 3. 3.]
+
+
+# Vector Dot Product
+# The dot product of two vectors is the sum of the products of their corresponding components.
+
+# creating a 1-D list (Horizontal) 
+list1 = [5, 6, 9] 
+  
+# creating a 1-D list (Horizontal) 
+list2 = [1, 2, 3] 
+  
+# creating first vector  
+vector1 = np.array(list1) 
+  
+# printing vector1 
+print("First Vector  : " + str(vector1))  # [5 6 9]
+  
+# creating second vector 
+vector2 = np.array(list2) 
+  
+# printing vector2 
+print("Second Vector : " + str(vector2)) # [1 2 3]
+  
+# getting dot product of both the vectors 
+# a . b = (a1 * b1 + a2 * b2 + a3 * b3) 
+# a . b = (a1b1 + a2b2 + a3b3) 
+dot_product = vector1.dot(vector2) 
+  
+# printing dot product 
+print("Dot Product   : " + str(dot_product)) # 44
+
+# Vector-Scalar Multiplication
+# The multiplication of a vector by a scalar is the multiplication of each component of the vector by the scalar.
+
+# creating a 1-D list (Horizontal) 
+list1 = [1, 2, 3] 
+  
+# creating first vector  
+vector = np.array(list1) 
+  
+# printing vector1 
+print("Vector  : " + str(vector)) # [1 2 3]
+  
+# scalar value  
+scalar = 2
+  
+# printing scalar value 
+print("Scalar  : " + str(scalar))  # 2
+   
+# getting scalar multiplication value 
+# s * v = (s * v1, s * v2, s * v3) 
+scalar_mul = vector * scalar 
+  
+# printing dot product 
+print("Scalar Multiplication : " + str(scalar_mul)) # [2 4 6]
