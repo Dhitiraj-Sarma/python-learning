@@ -357,3 +357,55 @@ y = np.array([4, 5])
 X, Y = np.meshgrid(x, y, copy=False)
 print("X:\n", X) # [[1 2 3] [1 2 3]]
 print("Y:\n", Y) # [[4 4 4] [5 5 5]]
+
+
+# --------------------------------------------------------------------------
+"""
+numpy.exp()– this mathematical function helps the user to calculate the exponential of all the elements in the input array.
+
+The numpy.exp() function is used to calculate the exponential of all elements in the input array.
+It computes ( e^x ), where ( e ) is Euler's number (approximately 2.718) and ( x ) is the input value.
+
+# SYNTAX
+numpy.exp(array, out = None, where = True, casting = ‘same_kind’, order = ‘K’, dtype = None)
+
+Parameters
+x: array-like
+Input values for which the exponential is to be calculated.
+
+out: ndarray, None, or tuple of ndarray and None, optional
+A location into which the result is stored. If provided, it must have a shape that the inputs broadcast to. If not provided, a freshly-allocated array is returned.
+
+where: array-like, optional
+This condition is broadcast over the input. At locations where the condition is True, the out array will be set to the ufunc result. Elsewhere, the out array will retain its original value.
+
+Returns
+out: ndarray
+An array with the exponential of each element in the input array
+
+
+
+Use Cases
+Scientific computations involving exponential growth or decay.
+Calculating probabilities in machine learning models like softmax.
+Solving mathematical equations involving exponentials.
+Notes
+The function works element-wise on arrays.
+It is highly optimized for performance and is faster than using Python's built-in math.exp() for arrays.
+"""
+
+# Example 1: Exponential of a single value
+x = 1
+result = np.exp(x)
+print(result)  # Output: 2.718281828459045
+
+# Example 2: Exponential of an array
+arr = np.array([0, 1, 2])
+result = np.exp(arr)
+print(result)  # Output: [ 1.          2.71828183  7.3890561 ]
+
+# Example 3: Using the `out` parameter
+arr = np.array([1, 2, 3])
+out = np.zeros_like(arr, dtype=float)
+np.exp(arr, out=out)
+print(out)  # Output: [ 2.71828183  7.3890561  20.08553692 ]
