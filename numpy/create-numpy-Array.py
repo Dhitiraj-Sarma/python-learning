@@ -561,3 +561,40 @@ scalar_mul = vector * scalar
   
 # printing dot product 
 print("Scalar Multiplication : " + str(scalar_mul)) # [2 4 6]
+
+
+
+# ---------------------------------------------------------------------------------------------
+
+#  Numpy fromrecords() method
+# The fromrecords() method in NumPy is used to create a structured array from a list of tuples or records.
+# This method is particularly useful when you have a collection of records, each with the same structure, 
+# and you want to convert them into a NumPy array for efficient processing.
+
+# SYNTAX
+# numpy.fromrecords(recList, dtype=None, shape=None, aligned=False, byteorder=None)
+"""
+Parameters:
+    recList: A list of tuples or structured data to be converted into a structured NumPy array.
+    dtype (optional): The data type of the resulting structured array. If not provided, NumPy will infer the type from the input data.
+    shape (optional): Shape of the output array. Defaults to one-dimensional.
+    aligned (optional): If True, aligns fields to their natural alignment.
+    byteorder (optional): Specifies the byte order of the output array.
+	"""
+
+	# Define a list of records
+records = [(1, 'Alice', 25.5), (2, 'Bob', 30.0), (3, 'Charlie', 28.0)]
+
+# Define the data type
+dtype = [('id', 'i4'), ('name', 'U10'), ('age', 'f4')]
+
+# Create the structured array
+structured_array = np.array(records, dtype=dtype)
+
+print(structured_array) # [(1, 'Alice', 25.5) (2, 'Bob', 30. ) (3, 'Charlie', 28. )]
+
+# Access the 'name' field
+print(structured_array['name']) # ['Alice' 'Bob' 'Charlie']
+
+# Access the 'age' field
+print(structured_array['age']) # [25.5 30.  28. ]
