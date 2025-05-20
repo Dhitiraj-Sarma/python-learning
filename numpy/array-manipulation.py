@@ -59,3 +59,21 @@ c[0] = 99
 
 print("original array- ", arr1) # [12  4  6  8 10]
 print("view- ", c) # [99  4  6  8 10]
+
+
+# Check if the Array is a View or a Copy
+# The base attribute of an array returns None if the array is a copy.
+# If the array is a view, it returns the original array.
+
+# creating array
+arr2 = np.array([2, 4, 6, 8, 10])
+
+# creating copy of array
+c = arr2.copy()
+
+# creating view of array
+v = arr2.view()
+
+# printing base attribute of copy and view
+print(c.base) # None
+print(v.base) # [ 2  4  6  8 10]
