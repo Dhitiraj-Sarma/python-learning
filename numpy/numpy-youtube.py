@@ -24,3 +24,9 @@ print(arr.ndim)
 print(arr.shape)
 
 # changing type of a array
+
+arr = np.array([1.2, 1.3, 2.5, 4.5])
+int_arr = arr.astype(int)
+
+print(int_arr) # [1 1 2 4]
+print(int_arr.dtype) # int64
