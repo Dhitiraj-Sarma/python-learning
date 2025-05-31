@@ -158,3 +158,25 @@ print(new_arr)
 arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
 new_arr_2d = np.delete(arr_2d, 1, axis=0)  # Delete second row
 print(new_arr_2d)
+
+
+# STACK in numpy
+"""
+vertically
+horixontally
+
+vstack() row wise
+hstack() column wise
+"""
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+# Vertical stack
+result_v = np.vstack((arr1, arr2))
+print(result_v)
+# [[1 2 3]
+#  [4 5 6]]
+# Horizontal stack
+result_h = np.hstack((arr1, arr2))
+print(result_h) # Output: [1 2 3 4 5 6]
