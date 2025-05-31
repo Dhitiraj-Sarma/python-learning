@@ -142,3 +142,19 @@ a = np.arange(8).reshape(2, 2, 2)
 b = np.array([[[300], [301]], [[302], [303]]])
 result = np.concatenate((a, b), axis=2)
 print(result.shape)  # Output: (2, 2, 3)
+
+
+
+# DELETE in NUMPY
+"""
+np.delete(array, index, axis=None)
+flattern array
+"""
+arr = np.array([10, 20, 30, 40, 50])
+new_arr = np.delete(arr, 0)
+print(new_arr)
+
+#  2D array
+arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
+new_arr_2d = np.delete(arr_2d, 1, axis=0)  # Delete second row
+print(new_arr_2d)
