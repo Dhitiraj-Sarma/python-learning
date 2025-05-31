@@ -180,3 +180,18 @@ print(result_v)
 # Horizontal stack
 result_h = np.hstack((arr1, arr2))
 print(result_h) # Output: [1 2 3 4 5 6]
+
+
+# Spliting in numpy
+"""
+np.split(array, indices_or_sections, axis=0)
+array: The input array to split.
+indices_or_sections: If an integer, the number of equal sections to split into. If a list, the indices at which to split.
+axis: The axis along which to split. Default is 0 (depth).
+
+np.hsplit()
+np.vsplit()
+"""
+
+arr = np.array([10, 20, 30, 40 ,50, 60])
+print(np.split(arr, 2))
