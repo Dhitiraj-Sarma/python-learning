@@ -89,3 +89,56 @@ arr = np.arange(8).reshape(2, 2, 2)
 new_col = [[[300], [301]], [[302], [303]]]
 result = np.append(arr, new_col, axis=2)
 print(result.shape)  # Output: (2, 2, 3)
+
+
+
+
+
+
+
+# CONCATENATE in NUMPY
+"""
+np.concatenate((a1, a2, ...), axis=0)
+a1, a2, ...: Arrays to concatenate.
+axis: The axis along which to concatenate. Default is 0 (depth).
+"""
+# 1D arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+result = np.concatenate((arr1, arr2))
+print(result)  # Output: [1 2 3 4 5 6]
+
+# 2D array
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[5, 6]])
+result = np.concatenate((a, b), axis=0)
+print(result)
+# Output:
+# [[1 2]
+#  [3 4]
+#  [5 6]]
+
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[5], [6]])
+result = np.concatenate((a, b), axis=1)
+print(result)
+# Output:
+# [[1 2 5]
+#  [3 4 6]]
+
+# 3D array
+a = np.arange(8).reshape(2, 2, 2)
+b = np.array([[[100, 101], [102, 103]]])
+result = np.concatenate((a, b), axis=0)
+print(result.shape)  # Output: (3, 2, 2)
+
+a = np.arange(8).reshape(2, 2, 2)
+b = np.array([[[200, 201]], [[202, 203]]])
+result = np.concatenate((a, b), axis=1)
+print(result.shape)  # Output: (2, 3, 2)
+
+
+a = np.arange(8).reshape(2, 2, 2)
+b = np.array([[[300], [301]], [[302], [303]]])
+result = np.concatenate((a, b), axis=2)
+print(result.shape)  # Output: (2, 2, 3)
