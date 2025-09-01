@@ -1,0 +1,26 @@
+[
+  {
+    "OrderDate": "2025-08-01",
+    "Region": "North",
+    "Product": "Laptop",
+    "Quantity": 2,
+    "UnitPrice": 1200,
+    "TotalSales": 2400
+  },
+  {
+    "OrderDate": "2025-08-01",
+    "Region": "South",
+    "Product": "Tablet",
+    "Quantity": 5,
+    "UnitPrice": 500,
+    "TotalSales": 2500
+  },
+  {
+    "OrderDate": "2025-08-02",
+    "Region": "East",
+    "Product": "Printer",
+    "Quantity": 1,
+    "UnitPrice": 250,
+    "TotalSales": 250
+  }
+]

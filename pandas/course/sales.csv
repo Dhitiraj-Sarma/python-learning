@@ -1,0 +1,9 @@
+OrderDate,Region,Product,Quantity,UnitPrice,TotalSales
+2025-08-01,North,Laptop,2,1200,2400
+2025-08-01,South,Tablet,5,500,2500
+2025-08-02,East,Printer,1,250,250
+2025-08-03,West,Monitor,3,300,900
+2025-08-04,North,Mouse,10,25,250
+2025-08-05,South,Keyboard,4,70,280
+2025-08-06,East,Webcam,6,90,540
+2025-08-07,West,Speaker,2,150,300

@@ -41,4 +41,5 @@ data = [
 ]
 
 df = pd.DataFrame(data, columns=['Name', 'Age', 'City'])
+df[df['Age'] > 28]
 print(df)
