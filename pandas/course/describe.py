@@ -9,5 +9,49 @@ data = {
 
 df = pd.DataFrame(data)
 
-print('Descriptive Staristics')
-print(df.describe())
+# print('Descriptive Staristics')
+# print(df.describe())
+
+
+"""
+1- how big is your dataset
+2- what are the names of colums
+
+shape and columns
+"""
+
+# print(f'Shape: {df.shape}')
+# print(f'Column Names: {df.columns}')
+
+"""
+- select specific column
+- filter rows
+- combine multiple conditions
+
+-square brackets
+boolean conditions
+
+selecting columsn
+- a series
+- dataframe multiple columns of data
+
+column = df[["C1", "C2", .....]]
+
+filtering rows
+boolean indexing
+
+based on a single condition
+filtered_rows = df[df["salary"] > 50000]
+
+combine multiple conditions
+filtered-rows = df[(df["salary]> 50000) & (df[salary] < 80000)]
+"""
+
+# select single column
+print("Name (Single column return series)")
+
+print(df["Name"])
+# select multiple columns
+subset = df[["Name", "Salary"]]
+print('\nSubset with Name and Salary')
+print(subset)
